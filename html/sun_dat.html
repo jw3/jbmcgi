@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<HTML>
+
+<HEAD>
+  <TITLE>
+    Sunrise/Sunset Input
+  </TITLE>
+</HEAD>
+
+<BODY BACKGROUND="../../graphics/databack.png" BGCOLOR="#C0C0C0" 
+  TEXT="#FFFFFF" LINK="#A87DE0" VLINK="#C1C1C1">
+
+<H2>
+  Sunrise/Sunset Input
+</H2>
+
+<HR>
+
+<TABLE>
+  <TR>
+    <TD>
+      <A HREF="../../index.html" TARGET="_top">[JBM]</A>
+    </TD>
+    <TD>
+      <A HREF="../ballistics.html" TARGET="_top">[Ballistics]</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<P>
+  <STRONG>Instructions</STRONG>
+</P>
+
+<P>
+  Enter your data in the areas provided below. Select the "Calculate" 
+  button when all fields are filled. If the field is blank, the default 
+  (shown in brackets) is used.
+  <BR><BR>
+  Explanation of <A HREF="sun_exp.html" TARGET="RESULTS">terms</A>. 
+</P>
+
+<FORM 
+  ACTION="/cgi-bin/jbm/jbmsun" 
+  METHOD="POST" TARGET="RESULTS">
+
+<INPUT TYPE=HIDDEN NAME="setup_ttl", VALUE="Sunrise/Sunset Output">
+<INPUT TYPE=HIDDEN NAME="setup_txt", VALUE="#FFFFFF">
+<INPUT TYPE=HIDDEN NAME="setup_bgc", VALUE="#000000">
+<INPUT TYPE=HIDDEN NAME="setup_lnk", VALUE="#00FFFF">
+<INPUT TYPE=HIDDEN NAME="setup_vlk", VALUE="#C1C1C1">
+<INPUT TYPE=HIDDEN NAME="setup_bkg",
+  VALUE="http://www.cybermesa.com/~jbm/graphics/calcback.png">
+<INPUT TYPE=HIDDEN NAME="setup_frm",
+  VALUE="http://www.cybermesa.com/~jbm/ballistics/sun/sun_dat.html">
+
+<BR>
+
+<STRONG>
+  Date
+</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Date (dd/mm/yyyy 1801-2099) [1/1/1997]
+  </FONT>
+  <BR>
+  <INPUT NAME="dy" VALUE="1" SIZE="2" MAXLENGTH="2"> 
+  <INPUT NAME="mo" VALUE="1" SIZE="2" MAXLENGTH="2"> 
+  <INPUT NAME="yr" VALUE="1997" SIZE="4" MAXLENGTH="4"> 
+</P>
+
+<BR>
+
+<STRONG>
+  Location
+</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Latitude, (-90 to 90 &deg) [32 &deg 16' 20.748'']
+  </FONT>
+  <BR>
+  <INPUT NAME="lt_d" VALUE="32" SIZE="5"> 
+  <INPUT NAME="lt_m" VALUE="16" SIZE="5"> 
+  <INPUT NAME="lt_s" VALUE="20.748" SIZE="5"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Longitude, (-180 to 180 &deg) [-106 &deg 46' 50.52'']
+  </FONT>
+  <BR>
+  <INPUT NAME="ln_d" VALUE="-106" SIZE="5"> 
+  <INPUT NAME="ln_m" VALUE="46" SIZE="5"> 
+  <INPUT NAME="ln_s" VALUE="50.52" SIZE="5"> 
+</P>
+
+<BR>
+
+<STRONG>
+  Time
+</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Time Zone [-7]
+  </FONT>
+  <BR>
+  <SELECT NAME="tz" SIZE="1">
+    <OPTION VALUE="-12">-12
+    <OPTION VALUE="-11">-11
+    <OPTION VALUE="-10">-10
+    <OPTION VALUE="-9"> -9
+    <OPTION VALUE="-8"> -8
+    <OPTION VALUE="-7" SELECTED> -7
+    <OPTION VALUE="-6"> -6
+    <OPTION VALUE="-5"> -5
+    <OPTION VALUE="-4"> -4
+    <OPTION VALUE="-3"> -3
+    <OPTION VALUE="-2"> -2
+    <OPTION VALUE="-1"> -1
+    <OPTION VALUE="0">  0
+    <OPTION VALUE="+1"> +1
+    <OPTION VALUE="+2"> +2
+    <OPTION VALUE="+3"> +3
+    <OPTION VALUE="+4"> +4
+    <OPTION VALUE="+5"> +5
+    <OPTION VALUE="+6"> +6
+    <OPTION VALUE="+7"> +7
+    <OPTION VALUE="+8"> +8
+    <OPTION VALUE="+9"> +9
+    <OPTION VALUE="+10">+10
+    <OPTION VALUE="+11">+11
+    <OPTION VALUE="+12">+12
+  </SELECT>
+</P>
+
+<P>
+  <INPUT TYPE=CHECKBOX CHECKED NAME="dst"> 
+  <FONT SIZE="-1">
+    Correct for Daylight Savings Time
+  </FONT>
+</P> 
+
+<P>
+  <INPUT TYPE="SUBMIT" VALUE="Calculate">
+</P>
+
+</FORM>
+
+</BODY>
+</HTML>

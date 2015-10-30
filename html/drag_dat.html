@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<HTML>
+
+<HEAD>
+  <TITLE>
+    Drag/Twist Input
+  </TITLE>
+</HEAD>
+
+<BODY BACKGROUND="../../graphics/databack.png" BGCOLOR="#C0C0C0" 
+  TEXT="#FFFFFF" LINK="#A87DE0" VLINK="#C1C1C1">
+
+<H2>
+  Drag/Twist Input
+</H2>
+
+<HR>
+
+<TABLE>
+  <TR>
+    <TD>
+      <A HREF="../../index.html" TARGET="_top">[JBM]</A>
+    </TD>
+    <TD>
+      <A HREF="../ballistics.html" TARGET="_top">[Ballistics]</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<P>
+  <STRONG>Instructions</STRONG>
+</P>
+
+<P>
+  Enter your data in the areas provided below. Select the "Calculate" button
+  when all fields are filled. If the field is blank, the default (shown in 
+  brackets) is used.
+  <BR><BR>
+  Explanation of <A HREF="drag_exp.html" TARGET = "RESULTS">terms</A>.
+</P>
+
+<FORM 
+  ACTION="/cgi-bin/jbm/jbmdrag" 
+  METHOD="POST" TARGET = "RESULTS">
+
+<INPUT TYPE=HIDDEN NAME="setup_ttl", VALUE="Drag/Twist Output">
+<INPUT TYPE=HIDDEN NAME="setup_txt", VALUE="#FFFFFF">
+<INPUT TYPE=HIDDEN NAME="setup_bgc", VALUE="#000000">
+<INPUT TYPE=HIDDEN NAME="setup_lnk", VALUE="#00FFFF">
+<INPUT TYPE=HIDDEN NAME="setup_vlk", VALUE="#C1C1C1">
+<INPUT TYPE=HIDDEN NAME="setup_bkg",
+  VALUE="http://www.cybermesa.com/~jbm/graphics/calcback.png">
+<INPUT TYPE=HIDDEN NAME="setup_frm",
+  VALUE="http://www.cybermesa.com/~jbm/ballistics/drag/drag_dat.html">
+
+<STRONG>
+  Bullet
+</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Caliber (0.1 to 2.0 inches) [0.308]
+  </FONT>
+  <BR>
+  <INPUT NAME="dia" VALUE="0.308"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Nose Length (caliber to 2.0 inches) [0.740]
+  </FONT>
+  <BR>
+  <INPUT NAME="nsl" VALUE="0.740"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Meplat Diameter (0.0 to half the caliber, inches) [0.062]
+  </FONT>
+  <BR>
+  <INPUT NAME="dmp" VALUE="0.062"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Ogive Radius (1 to 100 calibers) [15.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="rad" VALUE="15.0">
+</P>
+ 
+<P>
+  <FONT SIZE="-1">
+    Nose Type [Secant]
+  </FONT>
+  <BR>
+  <SELECT NAME="nst" SIZE="1">
+    <OPTION VALUE=1 SELECTED>Secant
+    <OPTION VALUE=2>Tangent
+    <OPTION VALUE=3>Conical
+  </SELECT>
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Boattail Length (0.0 to one caliber, inches) [0.180]
+  </FONT>
+  <BR>
+  <INPUT NAME="btl" VALUE="0.180"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Base Diameter (one caliber down to 0.1 inches) [0.251]
+  </FONT>
+  <BR>
+  <INPUT NAME="dba" VALUE="0.251">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Total Length (1.5 to 10.0 calibers, inches) [1.464]
+  </FONT>
+  <BR>
+  <INPUT NAME="tln" VALUE="1.464">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Rotating Band Diameter (1.0 to 1.2 calibers, inches) [0.308]
+  </FONT>
+  <BR>
+  <INPUT NAME="dbd" VALUE="0.308">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Bullet Weight (10 to 5000 grains) [210]
+  </FONT>
+  <BR>
+  <INPUT NAME="wgt" VALUE="210.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    <A HREF="drag_spg.html" 
+      TARGET="RESULTS">Bullet Specific Gravity</A> (2.0 to 20.0) [10.7]
+  </FONT>
+  <BR>
+  <INPUT NAME="spg" VALUE="10.7">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Drag Function [G1]
+  </FONT>
+  <BR>
+  <SELECT NAME="dgf" SIZE="1">
+    <OPTION VALUE=1 SELECTED>G1
+    <OPTION VALUE=2>G2
+    <OPTION VALUE=3>G5
+    <OPTION VALUE=4>G6
+    <OPTION VALUE=5>G7
+    <OPTION VALUE=6>G8
+    <OPTION VALUE=7>GL
+    <OPTION VALUE=8>GI
+  </SELECT>
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Barrel Twist (2.0 to 100.0) [10.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="twt" VALUE="10.0">
+</P>
+
+<BR><STRONG>Options</STRONG>
+
+<P>
+  <INPUT TYPE=CHECKBOX NAME="shc"> 
+  <FONT SIZE="-1">
+    Show CD components
+  </FONT>
+</P>
+
+<BR><STRONG>Atmosphere</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Temperature (-40 to 140 degrees Fahrenheit) [59.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="tp" VALUE="59.0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Pressure (15 to 40 inches Hg) [29.92]
+  </FONT>
+  <BR>
+  <INPUT NAME="pr" VALUE="29.92"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Relative Humidity (0 to 100%) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="hu" VALUE="0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Altitude (-1000 to 15000 feet) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="al" VALUE="0"> 
+</P>
+
+<BR>
+  Checking standard conditions at altitude cause the temperature, pressure
+  and humidity to be adjusted for the given altitude, otherwise the air 
+  density is calculated from the temperature, pressure and humidity using
+  the ICAO Standard Atmosphere.
+<BR>
+
+<P>
+  <INPUT TYPE=CHECKBOX NAME="alc"> 
+  <FONT SIZE="-1">
+    Standard conditions at altitude
+  </FONT>
+</P>
+
+<BR>
+
+<P>
+  <INPUT TYPE="SUBMIT" VALUE="Calculate">
+</P>
+
+</FORM>
+
+</BODY>
+</HTML>

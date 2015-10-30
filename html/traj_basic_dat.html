@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<HTML>
+
+<HEAD>
+  <TITLE>
+    Trajectory (Basic) Input
+  </TITLE>
+</HEAD>
+
+<BODY BACKGROUND="../../graphics/databack.png" BGCOLOR="#C0C0C0" 
+  TEXT="#FFFFFF" LINK="#A87DE0" VLINK="#C1C1C1">
+
+<H2>
+  Trajectory (Basic) Input
+</H2>
+
+<HR>
+
+<TABLE>
+  <TR>
+    <TD>
+      <A HREF="../../index.html" TARGET="_top">[JBM]</A>
+    </TD>
+    <TD>
+      <A HREF="../ballistics.html" TARGET="_top">[Ballistics]</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<P>
+  <STRONG>Instructions</STRONG>
+</P>
+
+<P>
+  Enter your data in the areas provided below. Select the "Calculate" button 
+  when all fields are filled. Wind direction is perpendicular to the line of 
+  sight, positive values are to  the shooter's right. If the Chronograph 
+  distance is greater than zero, the muzzle velocity is corrected for this
+  distance. If the field is blank, the default (shown in brackets) is used.
+  <BR><BR>
+  Explanation of <A HREF="traj_basic_exp.html" TARGET="RESULTS">terms</A>.
+</P>
+
+<FORM 
+  ACTION="/cgi-bin/jbm/jbmtraj" 
+  METHOD="POST" TARGET="RESULTS">
+
+<INPUT TYPE=HIDDEN NAME="setup_ttl", VALUE="Trajectory (Basic) Output">
+<INPUT TYPE=HIDDEN NAME="setup_txt", VALUE="#FFFFFF">
+<INPUT TYPE=HIDDEN NAME="setup_bgc", VALUE="#000000">
+<INPUT TYPE=HIDDEN NAME="setup_lnk", VALUE="#00FFFF">
+<INPUT TYPE=HIDDEN NAME="setup_vlk", VALUE="#C1C1C1">
+<INPUT TYPE=HIDDEN NAME="setup_bkg",
+  VALUE="http://www.cybermesa.com/~jbm/graphics/calcback.png">
+<INPUT TYPE=HIDDEN NAME="setup_frm",
+  VALUE="http://www.cybermesa.com/~jbm/ballistics/traj_basic/traj_basic_dat.html">
+
+<INPUT TYPE=HIDDEN NAME="xc" VALUE="0.0"> 
+<INPUT TYPE=HIDDEN NAME="df" VALUE="1">
+<INPUT TYPE=HIDDEN NAME="so" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="wx" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="wy" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="az" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="el" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="ca" VALUE="0.0">
+<INPUT TYPE=HIDDEN NAME="sa" VALUE="90">
+<INPUT TYPE=HIDDEN NAME="bs" VALUE="1">
+<INPUT TYPE=HIDDEN NAME="zy" VALUE="0">
+<INPUT TYPE=HIDDEN NAME="zz" VALUE="0">
+
+<P>
+  <FONT SIZE="-1">
+    Muzzle Velocity (500 to 4500 ft/sec) [3000.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="mv" VALUE="3000.0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    BC (<A HREF="../common/bclinks.html" TARGET="RESULTS"> links</A>),
+    (0.010 to 2.0) [0.5]
+  </FONT>
+  <BR>
+  <INPUT NAME="bc" VALUE="0.5"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Bullet Weight (5 to 5000 grains) [220.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="wt" VALUE="220.0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Sight Height (-100 to 100 inches) [1.5]
+  </FONT>
+  <BR>
+  <INPUT NAME="sh" VALUE="1.5">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Cross Wind Speed (-100 to 100 mph) [10.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="wz" VALUE="10.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    LOS (-90 to 90 degrees) [0.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="la" VALUE="0.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Speed (-100 to 100 mph) [10.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="sp" VALUE="10.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Zero Range (10 to 2000 yards) [100.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="rz" VALUE="100.0">
+</P>
+
+<BR>
+
+<STRONG>
+  Ranges
+</STRONG>
+  
+<P>
+  <FONT SIZE="-1">
+    Minimum (0 to 1900 yards) [0.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="rn" VALUE="0.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Maximum (100 to 2000 yards) [1000.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="rx" VALUE="1000.0">
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Increment (1 to 500 yards) [100.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="ri" VALUE="100.0">
+</P>
+
+<BR>
+
+<STRONG>
+  Options
+</STRONG>
+
+<P>
+  If correction for azimuth or elevation is chosen the entered values
+  (above) for azimuth and elevation are ignored.
+</P>
+
+<P>
+  <INPUT TYPE=CHECKBOX CHECKED NAME="elc"> 
+  <FONT SIZE="-1">
+    Elevation Correction for Zero Range
+  </FONT>
+  <BR>
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Drop and Windage units
+  </FONT>
+  <BR>
+  <SELECT NAME="un" SIZE="1">
+    <OPTION VALUE="1" selected> Inches
+    <OPTION VALUE="2"> MOA
+    <OPTION VALUE="3"> Mils
+  </SELECT>
+</P>
+
+<BR><STRONG>Atmosphere</STRONG>
+
+<P>
+  <FONT SIZE="-1">
+    Temperature (-40 to 140 degrees Fahrenheit) [59.6]
+  </FONT>
+  <BR>
+  <INPUT NAME="tp" VALUE="59.6"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Pressure (15 to 40 inches Hg) [29.92]
+  </FONT>
+  <BR>
+  <INPUT NAME="pr" VALUE="29.92"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Relative Humidity (0 to 100%) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="hu" VALUE="0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Altitude (-1000 to 15000 feet) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="al" VALUE="0"> 
+</P>
+
+<P>
+  Checking standard conditions at altitude cause the temperature, pressure
+  and humidity to be adjusted for the given altitude, otherwise the air 
+  density is calculated from the temperature, pressure and humidity using 
+  the ICAO Standard Atmosphere.
+</P>
+
+<P>
+  <INPUT TYPE=CHECKBOX NAME="alc"> 
+  <FONT SIZE="-1">
+    Standard conditions at altitude
+  </FONT>
+</P> 
+
+<P>
+  <INPUT TYPE="SUBMIT" VALUE="Calculate">
+</P>
+
+</FORM>
+
+</BODY>
+</HTML>

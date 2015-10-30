@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<HTML>
+
+<HEAD>
+  <TITLE>
+    BC (Time) Input
+  </TITLE>
+</HEAD>
+
+<BODY BACKGROUND="../../graphics/databack.png" BGCOLOR="#C0C0C0" 
+  TEXT="#FFFFFF" LINK="#A87DE0" VLINK="#C1C1C1">
+
+<H2>
+  BC (Time) Input
+</H2>
+
+<HR>
+
+<TABLE>
+  <TR>
+    <TD>
+      <A HREF="../../index.html" TARGET="_top">[JBM]</A>
+    </TD>
+    <TD>
+      <A HREF="../ballistics.html" TARGET="_top">[Ballistics]</A>
+    </TD>
+  </TR>
+</TABLE>
+
+<P>
+  <STRONG>Instructions</STRONG>
+</P>
+
+<P>
+  Enter your data in the areas provided below. Select the "Calculate" 
+  button when all fields are filled. If the field is blank, the default 
+  (shown in brackets) is used.
+  <BR><BR>
+  Explanation of <A HREF="bct_exp.html" TARGET = "RESULTS">terms</A>. 
+</P>
+
+<FORM ACTION="/cgi-bin/jbm/jbmbct" 
+  METHOD="POST" TARGET = "RESULTS">
+
+<INPUT TYPE=HIDDEN NAME="setup_ttl", VALUE="BC (Time) Output">
+<INPUT TYPE=HIDDEN NAME="setup_txt", VALUE="#FFFFFF">
+<INPUT TYPE=HIDDEN NAME="setup_bgc", VALUE="#000000">
+<INPUT TYPE=HIDDEN NAME="setup_lnk", VALUE="#00FFFF">
+<INPUT TYPE=HIDDEN NAME="setup_vlk", VALUE="#C1C1C1">
+<INPUT TYPE=HIDDEN NAME="setup_bkg",
+  VALUE="http://www.cybermesa.com/~jbm/graphics/calcback.png">
+<INPUT TYPE=HIDDEN NAME="setup_frm",
+  VALUE="http://www.cybermesa.com/~jbm/ballistics/bct/bct_dat.html">
+
+<STRONG>Range Data</STRONG>
+
+
+<P>
+  <FONT SIZE = -1>
+    Near Velocity (600 to 4500 ft/sec) [3000.0]
+  </FONT>
+  <BR>
+  <INPUT NAME="nv" VALUE="3000.0"> 
+</P>
+
+<P>
+  <FONT SIZE = -1>
+    Flight Time (0.00001 to 6.0 sec) [0.103]
+  </FONT>
+  <BR>
+  <INPUT NAME="tm" VALUE="0.103"> 
+</P>
+
+<P>
+  <FONT SIZE = -1>
+    Distance (1 to 600 feet) [300.000]
+  </FONT>
+  <BR>
+  <INPUT NAME="xc" VALUE="300.000"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Drag Function [G1]
+  </FONT>
+  <BR>
+  <SELECT name="df" size=1>
+    <option value=1 selected>G1
+    <option value=2>G2
+    <option value=3>G5
+    <option value=4>G6
+    <option value=5>G7
+    <option value=6>G8
+    <option value=7>GL
+    <option value=8>GI
+  </SELECT>
+</P>
+
+<BR><STRONG>Atmosphere</STRONG>
+
+
+<P>
+  <FONT SIZE="-1">
+    Temperature (-40 to 140 degrees Fahrenheit) [59.6]
+  </FONT>
+  <BR>
+  <INPUT NAME="tp" VALUE="59.6"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Pressure (15 to 40 inches Hg) [29.92]
+  </FONT>
+  <BR>
+  <INPUT NAME="pr" VALUE="29.92"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Relative Humidity (0 to 100%) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="hu" VALUE="0"> 
+</P>
+
+<P>
+  <FONT SIZE="-1">
+    Altitude (-1000 to 15000 feet) [0]
+  </FONT>
+  <BR>
+  <INPUT NAME="al" VALUE="0"> 
+</P>
+
+<BR>
+Checking standard conditions at altitude cause the temperature, pressure
+and humidity to be adjusted for the given altitude, otherwise the air 
+density is calculated from the temperature, pressure and humidity using 
+the ICAO Standard Atmosphere.
+<BR>
+
+
+<P>
+  <INPUT TYPE=CHECKBOX NAME="alc"> 
+  <FONT SIZE="-1">
+    Standard conditions at altitude
+  </FONT>
+</P>
+
+<BR>
+
+<P>
+  <INPUT TYPE="SUBMIT" VALUE="Calculate">
+</P>
+
+</FORM>
+
+</BODY>
+</HTML>
